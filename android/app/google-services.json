@@ -1,26 +1,36 @@
 {
   "project_info": {
-    "project_number": "855941237369",
-    "project_id": "todo2-9edb6",
-    "storage_bucket": "todo2-9edb6.appspot.com"
+    "project_number": "525096054129",
+    "project_id": "ffbooking-ec93d",
+    "storage_bucket": "ffbooking-ec93d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:855941237369:android:f452f6b750686ec32fa2a8",
+        "mobilesdk_app_id": "1:525096054129:android:2cc625a819a4d4a9901ad0",
         "android_client_info": {
           "package_name": "com.solo3.todo2"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "525096054129-c98snkpdb1dpdj1c20opki8df6odqvvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBgXlHxhzoE57BNA4TxaDNe_FJIFNQOiBQ"
+          "current_key": "AIzaSyD8Ik2EkiTM0_QOeIMa1f5zOZelqeELrxg"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525096054129-c98snkpdb1dpdj1c20opki8df6odqvvq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

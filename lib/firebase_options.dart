@@ -17,15 +17,24 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,39 +52,11 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDVO846gcXSprhi1ZDiXtVAB6cpAiMSZ20',
-    appId: '1:855941237369:web:32eceb682a5cfe2d2fa2a8',
-    messagingSenderId: '855941237369',
-    projectId: 'todo2-9edb6',
-    authDomain: 'todo2-9edb6.firebaseapp.com',
-    storageBucket: 'todo2-9edb6.appspot.com',
-    measurementId: 'G-P0NQRNB33K',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBgXlHxhzoE57BNA4TxaDNe_FJIFNQOiBQ',
-    appId: '1:855941237369:android:f452f6b750686ec32fa2a8',
-    messagingSenderId: '855941237369',
-    projectId: 'todo2-9edb6',
-    storageBucket: 'todo2-9edb6.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBDNSlV5c61utfMZLBLUx3fpM3uyygUCj4',
-    appId: '1:855941237369:ios:135407353eaaf5972fa2a8',
-    messagingSenderId: '855941237369',
-    projectId: 'todo2-9edb6',
-    storageBucket: 'todo2-9edb6.appspot.com',
-    iosBundleId: 'com.solo3.todo2',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBDNSlV5c61utfMZLBLUx3fpM3uyygUCj4',
-    appId: '1:855941237369:ios:1e4f4e5b0b03c14f2fa2a8',
-    messagingSenderId: '855941237369',
-    projectId: 'todo2-9edb6',
-    storageBucket: 'todo2-9edb6.appspot.com',
-    iosBundleId: 'com.solo3.todo2.RunnerTests',
+    apiKey: 'AIzaSyD8Ik2EkiTM0_QOeIMa1f5zOZelqeELrxg',
+    appId: '1:525096054129:android:2cc625a819a4d4a9901ad0',
+    messagingSenderId: '525096054129',
+    projectId: 'ffbooking-ec93d',
+    storageBucket: 'ffbooking-ec93d.appspot.com',
   );
 }
