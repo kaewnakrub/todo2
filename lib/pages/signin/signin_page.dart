@@ -20,25 +20,27 @@ class _SignInPageState extends State<SignInPage> {
       ],
       actions: [
         AuthStateChangeAction<SignedIn>((context, state) {
-          log(state.user!.email.toString());
+          // check user is not null
+          if (state.user != null) {
+            log(state.user!.email.toString());
 
-          final userId = state.user!.uid.toString();
-          final emailAdress = state.user!.email.toString();
-          final timeStamp = DateTime.now().millisecondsSinceEpoch;
-
-          // check document id in users colloection
-          firestore.collection('users').doc(userId).get().then((value) {
-            if (value.exists) {
-              log('has user data');
-            } else {
-              log('add new user data');
-              firestore.collection('users').doc(userId).set({
-                'userId': userId,
-                'emailAddress': emailAdress,
-                'createAt': timeStamp,
-              });
-            }
-          });
+            final userId = state.user!.uid.toString();
+            final emailAdress = state.user!.email.toString();
+            final timeStamp = DateTime.now().millisecondsSinceEpoch;
+            // check document id in users colloection
+            firestore.collection('users').doc(userId).get().then((value) {
+              if (value.exists) {
+                log('has user data');
+              } else {
+                log('add new user data');
+                firestore.collection('users').doc(userId).set({
+                  'userId': userId,
+                  'emailAddress': emailAdress,
+                  'createAt': timeStamp,
+                });
+              }
+            });
+          }
         })
       ],
     );
